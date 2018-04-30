@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #
 # Apache/PHP/Drupal settings:
 #
@@ -186,4 +187,8 @@ AddEncoding gzip svgz
   Header always set X-Content-Type-Options nosniff
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
+=======
+<IfModule mod_headers.c>
+  Header set Cache-Control "max-age=0"
+>>>>>>> 0ab620f52e3641cb39f5b7e3b4c152e7f1651960
 </IfModule>

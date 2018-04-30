@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ignore configuration files that may contain sensitive information.
 local.settings.php
 local.drushrc.php
@@ -124,3 +125,10 @@ nbproject/*
 
 # PHPStorm
 atlassian-ide-plugin.xml
+=======
+# Ignore paths that contain user-generated content.
+docroot/files
+docroot/sites/*/files
+docroot/sites/*/private
+
+>>>>>>> 0ab620f52e3641cb39f5b7e3b4c152e7f1651960
