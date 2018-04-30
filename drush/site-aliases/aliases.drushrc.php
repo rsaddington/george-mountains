@@ -359,3 +359,18 @@
 #    'uri' => 'http://example.com',
 #    'root' => $aliases['dev']['root'],
 #  ) + $aliases['server'];
+
+// Local environment.
+$aliases['george-mountains.local'] = array(
+  'root' => '/var/www/george-mountains/docroot',
+  'uri' => 'http://local.george-mountains.com',
+  );
+// Add remote connection options when alias is used outside VM.
+if ('vagrant' != $_SERVER['USER']) {
+  $aliases['george-mountains.local'] += array(
+    'remote-host' => 'local.george-mountains.com',
+    'remote-user' => 'vagrant',
+    'ssh-options' => '-o PasswordAuthentication=no -i ' . drush_server_home() . '/.vagrant.d/insecure_private_key'
+  );
+}
+
