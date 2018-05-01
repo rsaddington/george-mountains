@@ -795,3 +795,8 @@ $databases['default']['default'] = array (
 );
 $settings['install_profile'] = 'lightning';
 $config_directories['sync'] = 'sites/default/files/config_AMy_hyj9tEHtZeZQR0d7kUJF4UBCtKlzsvDTQxp38oRzCpZlllea0GoyTlxnBOnFoplFzcoaaw/sync';
+
+// Added for ACE db connections....
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/eersaddington/eersaddington-settings.inc';
+}
