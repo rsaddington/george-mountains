@@ -12,6 +12,10 @@ variables:
 events:
   build:
     steps:
+        - setup-project:
+            type: script
+            script:
+              - composer install
         - setup-env:
             type: script
             script:
