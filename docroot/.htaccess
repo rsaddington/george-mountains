@@ -1,8 +1,10 @@
 #
 # Custom rewrite for maintenance page
 # Add to the very top of .htaccess
+# Drupal will function fully behind this rewrite if your IP is whitelisted
 # To enable/disable simply comment out the whole block
 #
+
 <IfModule mod_rewrite.c>
   
   # Disable all caching so our 307s aren't cached downstream
@@ -18,8 +20,10 @@
   RewriteCond %{SCRIPT_FILENAME} !^/index\.php$
 
   # Whitelist these IPs from the redirect so they can view the site as normal
-  RewriteCond %{REMOTE_ADDR} !^127.0.0.1|192.168.198.1|82.38.232.235
-    
+  # RewriteCond %{REMOTE_ADDR} !^127.0.0.1|192.168.198.1|82.38.232.235
+  # When behind an ELB/Varnish
+  RewriteCond %{HTTP:X-FORWARDED-FOR} !^127.0.0.1|192.168.198.1|82.38.232.235  
+
   # Don't redirect the maintaince page or assets
   RewriteCond %{REQUEST_URI} !^/maintenance/index.html$
   RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif|css|js|ico) [NC]
@@ -29,7 +33,7 @@
 </IfModule>
 
 #
-# End of rewrite block 
+# End of maintenance page rewrite block 
 #
 
 #
