@@ -1,5 +1,7 @@
 #
 # Custom rewrite for maintenance page
+# Add to the very top of .htaccess
+# To enable/disable simply comment out the whole block
 #
 <IfModule mod_rewrite.c>
   
@@ -25,6 +27,10 @@
   # Perform a 307 redirect to prevent caching
   RewriteRule ^(.*)$ /maintenance/index.html [R=307,L]
 </IfModule>
+
+#
+# End of rewrite block 
+#
 
 #
 # Apache/PHP/Drupal settings:
