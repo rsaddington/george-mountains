@@ -16,7 +16,7 @@
   RewriteCond %{SCRIPT_FILENAME} !^/index\.php$
 
   # Whitelist these IPs from the redirect so they can view the site as normal
-  RewriteCond %{REMOTE_ADDR} !^127.0.0.1|192.168.198.1|82.38.232.235
+  #RewriteCond %{REMOTE_ADDR} !^127.0.0.1|192.168.198.1|82.38.232.235
     
   # Don't redirect the maintaince page or assets
   RewriteCond %{REQUEST_URI} !^/maintenance/index.html$
