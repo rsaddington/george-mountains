@@ -5,35 +5,35 @@
 # To enable/disable simply comment out the whole block
 #
 
-#<IfModule mod_rewrite.c>
-#  
-#  # Disable all caching so our 307s aren't cached downstream
-#  <ifModule mod_headers.c>
-#    Header unset ETag
-#    Header always set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
-#    Header always set Pragma "no-cache"
-#    Header always set Expires "Wed, 08 Jan 1975 05:00:00 GMT"
-#  </ifModule>
-
-#  RewriteEngine on 
-#  RewriteCond %{REQUEST_FILENAME} !-f
-#  RewriteCond %{SCRIPT_FILENAME} !^/index\.php$
-
-#  # Whitelist these IPs from the redirect so they can view the site as normal
+<IfModule mod_rewrite.c>
   
-#  # For local development/BLT
-#  # RewriteCond %{REMOTE_ADDR} !^127.0.0.1|192.168.198.1
-  
-#  # When behind an ELB/Varnish
-#  RewriteCond %{HTTP:X-FORWARDED-FOR} !^82.38.232.235|x.x.x.x
+  # Disable all caching so our 307s aren't cached downstream
+  <ifModule mod_headers.c>
+    Header unset ETag
+    Header always set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header always set Pragma "no-cache"
+    Header always set Expires "Wed, 08 Jan 1975 05:00:00 GMT"
+  </ifModule>
 
-#  # Don't redirect the maintaince page or assets
-#  RewriteCond %{REQUEST_URI} !^/maintenance/index.html$ [OR]
-#  RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif|css|js|ico) [NC]
+  RewriteEngine on 
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{SCRIPT_FILENAME} !^/index\.php$
+
+  # Whitelist these IPs from the redirect so they can view the site as normal
   
-#  # Perform a 307 redirect to prevent caching
-#  RewriteRule ^(.*)$ /maintenance/index.html [R=307,L]
-#</IfModule>
+  # For local development/BLT
+  # RewriteCond %{REMOTE_ADDR} !^127.0.0.1|192.168.198.1
+  
+  # When behind an ELB/Varnish
+  RewriteCond %{HTTP:X-FORWARDED-FOR} !^82.38.232.235|109.99.67.48
+
+  # Don't redirect the maintaince page or assets
+  RewriteCond %{REQUEST_URI} !^/maintenance/index.html$ [OR]
+  RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif|css|js|ico) [NC]
+  
+  # Perform a 307 redirect to prevent caching
+  RewriteRule ^(.*)$ /maintenance/index.html [R=307,L]
+</IfModule>
 
 #
 # End of maintenance page rewrite block 
