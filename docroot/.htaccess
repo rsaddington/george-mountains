@@ -3,7 +3,7 @@
 #
 <IfModule mod_rewrite.c>
   
-  # Disable all caching so our 307s aren't cached downstream...
+  # Disable all caching so our 307s aren't cached downstream
   <ifModule mod_headers.c>
     Header unset ETag
     Header always set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
@@ -16,7 +16,7 @@
   RewriteCond %{SCRIPT_FILENAME} !^/index\.php$
 
   # Whitelist these IPs from the redirect so they can view the site as normal
-  #RewriteCond %{REMOTE_ADDR} !^127.0.0.1|192.168.198.1|82.38.232.235
+  RewriteCond %{REMOTE_ADDR} !^127.0.0.1|192.168.198.1|82.38.232.235
     
   # Don't redirect the maintaince page or assets
   RewriteCond %{REQUEST_URI} !^/maintenance/index.html$
