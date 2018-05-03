@@ -799,4 +799,4 @@ $config_directories['sync'] = 'sites/default/files/config_AMy_hyj9tEHtZeZQR0d7kU
 // Added for ACE db connections....
 if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/eersaddington/eersaddington-settings.inc';
-}
+}require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
