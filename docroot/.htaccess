@@ -45,7 +45,7 @@
 #
 RewriteEngine on 
 RewriteCond %{ENV:AH_SITE_ENVIRONMENT} prod [NC] # only prod
-RewriteCond %{HTTP_HOST} ^example\.com$ [NC]
+RewriteCond %{HTTP_HOST} ^mountaingeorge\.uk$ [NC]
 RewriteCond %{HTTP_HOST} !\.acquia-sites\.com [NC]
 RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
