@@ -1,0 +1,15 @@
+diff --git a/advagg.links.task.yml b/advagg.links.task.yml
+index 129d2a3..498a0db 100644
+--- a/advagg.links.task.yml
++++ b/advagg.links.task.yml
+@@ -2,10 +2,6 @@ advagg.settings:
+   title: 'Advanced CSS/JS Aggregation'
+   route_name: advagg.settings
+   base_route: system.performance_settings
+-advagg.performance:
+-  title: 'Performance'
+-  route_name: system.performance_settings
+-  base_route: system.performance_settings
+ advagg.settings_tab:
+   title: 'Configuration'
+   route_name: advagg.settings
