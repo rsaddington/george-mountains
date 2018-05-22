@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# Cloud Hook: drush-setup-dev-config
+# Cloud Hook: drush-setup-prod-config
 #
-# Configure the dev environment
+# Configure the prod environment
 #
 
 # Map the script inputs to convenient names.
