@@ -11,10 +11,10 @@ target_env=$2
 drush_alias=$site'.'$target_env
 
 # Disable devel module
-drush @$drush_alias pm-uninstall devel -y
+drush @$drush_alias pm-uninstall devel --yes
 
 # Turn off DBlog
-drush @$drush_alias pm-uninstall dblog -y
+drush @$drush_alias pm-uninstall dblog --yes
 
 # Turn on Syslog
-drush @$drush_alias en syslog -y
+drush @$drush_alias pm-enabe syslog --yes

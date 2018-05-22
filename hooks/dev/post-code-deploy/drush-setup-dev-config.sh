@@ -11,7 +11,7 @@ target_env=$2
 drush_alias=$site'.'$target_env
 
 # Enable the devel module
-drush @$drush_alias en devel
+drush @$drush_alias pm-enable devel --yes
 
 # Turn on DBlog
-drush @$drush_alias pm-uninstall dblog -y
+drush @$drush_alias pm-uninstall dblog --yes
