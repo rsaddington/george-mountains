@@ -11,7 +11,7 @@ target_env=$2
 drush_alias=$site'.'$target_env
 
 # Enable the devel module
-/usr/local/bin/drush9 @$drush_alias pm-enable devel --yes
+/usr/local/bin/drush9 pm-enable devel --yes --root=/var/www/html/$drush_alias/docroot
 
 # Turn on DBlog
-/usr/local/bin/drush9 @$drush_alias pm-uninstall dblog --yes
+/usr/local/bin/drush9 pm-uninstall dblog --yes --root=/var/www/html/$drush_alias/docroot
