@@ -10,13 +10,13 @@ site=$1
 target_env=$2
 drush_alias=$site'.'$target_env
 
-echo "Hello, Cloud: " . $drush_alias
+echo "Hello, Cloud: " $drush_alias
 
 # Disable devel module
-drush @$drush_alias pm-uninstall devel --yes
+/usr/local/bin/drush9 @$drush_alias pm-uninstall devel --yes
 
 # Turn off DBlog
-drush @$drush_alias pm-uninstall dblog --yes
+/usr/local/bin/drush9 @$drush_alias pm-uninstall dblog --yes
 
 # Turn on Syslog
-drush @$drush_alias pm-enable syslog --yes
+/usr/local/bin/drush9 @$drush_alias pm-enable syslog --yes
