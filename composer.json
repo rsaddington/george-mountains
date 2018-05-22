@@ -19,9 +19,10 @@
         "drupal/ds": "^3.1",
         "drupal/integrity": "^1.7",
         "acquia/lightning": "~3.1.3",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^9.2",
         "drupal/advagg": "^3.5",
-        "drupal/ape": "^1.2"
+        "drupal/ape": "^1.2",
+        "drupal/imagemagick": "^2.3"
     },
     "require-dev": {},
     "extra": {
