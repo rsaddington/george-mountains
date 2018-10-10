@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fba4fffa4326d62e6a2f0386ddffa2d3",
+    "content-hash": "66e6a47a99ea974c2351553ade5a1aca",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -850,25 +850,23 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "1.3.1",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/Robo.git",
-                "reference": "31f2d2562c4e1dcde70f2659eefd59aa9c7f5b2d"
+                "reference": "273455c0dc1ebb1e9515ae27ad298bec800f1c11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/Robo/zipball/31f2d2562c4e1dcde70f2659eefd59aa9c7f5b2d",
-                "reference": "31f2d2562c4e1dcde70f2659eefd59aa9c7f5b2d",
+                "url": "https://api.github.com/repos/consolidation/Robo/zipball/273455c0dc1ebb1e9515ae27ad298bec800f1c11",
+                "reference": "273455c0dc1ebb1e9515ae27ad298bec800f1c11",
                 "shasum": ""
             },
             "require": {
                 "consolidation/annotated-command": "^2.8.2",
-                "consolidation/config": "^1.0.10",
+                "consolidation/config": "^1.0.1",
                 "consolidation/log": "~1",
                 "consolidation/output-formatters": "^3.1.13",
-                "consolidation/self-update": "^1",
-                "g1a/composer-test-scenarios": "^2",
                 "grasmash/yaml-expander": "^1.3",
                 "league/container": "^2.2",
                 "php": ">=5.5.0",
@@ -885,6 +883,7 @@
                 "codeception/aspect-mock": "^1|^2.1.1",
                 "codeception/base": "^2.3.7",
                 "codeception/verify": "^0.3.2",
+                "g1a/composer-test-scenarios": "^2",
                 "goaop/framework": "~2.1.2",
                 "goaop/parser-reflection": "^1.1.0",
                 "natxet/cssmin": "3.0.4",
@@ -927,57 +926,7 @@
                 }
             ],
             "description": "Modern task runner",
-            "time": "2018-08-17T18:44:18+00:00"
-        },
-        {
-            "name": "consolidation/self-update",
-            "version": "1.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/consolidation/self-update.git",
-                "reference": "de33822f907e0beb0ffad24cf4b1b4fae5ada318"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/self-update/zipball/de33822f907e0beb0ffad24cf4b1b4fae5ada318",
-                "reference": "de33822f907e0beb0ffad24cf4b1b4fae5ada318",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0",
-                "symfony/console": "^2.8|^3|^4",
-                "symfony/filesystem": "^2.5|^3|^4"
-            },
-            "bin": [
-                "scripts/release"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SelfUpdate\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                },
-                {
-                    "name": "Alexander Menk",
-                    "email": "menk@mestrona.net"
-                }
-            ],
-            "description": "Provides a self:update command for Symfony Console applications.",
-            "time": "2018-08-24T17:01:46+00:00"
+            "time": "2018-05-25T20:54:02+00:00"
         },
         {
             "name": "consolidation/site-alias",
@@ -7548,39 +7497,6 @@
                 "sdk"
             ],
             "time": "2018-07-03T02:25:00+00:00"
-        },
-        {
-            "name": "g1a/composer-test-scenarios",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/g1a/composer-test-scenarios.git",
-                "reference": "a166fd15191aceab89f30c097e694b7cf3db4880"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/g1a/composer-test-scenarios/zipball/a166fd15191aceab89f30c097e694b7cf3db4880",
-                "reference": "a166fd15191aceab89f30c097e694b7cf3db4880",
-                "shasum": ""
-            },
-            "bin": [
-                "scripts/create-scenario",
-                "scripts/dependency-licenses",
-                "scripts/install-scenario"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Greg Anderson",
-                    "email": "greg.1.anderson@greenknowe.org"
-                }
-            ],
-            "description": "Useful scripts for testing multiple sets of Composer dependencies.",
-            "time": "2018-08-08T23:37:23+00:00"
         },
         {
             "name": "geerlingguy/drupal-vm",
