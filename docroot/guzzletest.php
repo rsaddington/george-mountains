@@ -9,8 +9,6 @@
 // for you already.
 require 'vendor/autoload.php';
 use GuzzleHttp\Client;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
 $client = new GuzzleHttp\Client(['base_uri' => 'https://api.ipify.org']);
 
