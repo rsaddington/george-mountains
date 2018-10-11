@@ -13,12 +13,18 @@ use GuzzleHttp\Client;
 $client = new GuzzleHttp\Client(['base_uri' => 'https://api.ipify.org']);
 
 $response = $client->request('GET','?format=json',['force_ip_resolve' => 'v4']);
+
+$code = $response->getStatusCode(); // 200
+$reason = $response->getReasonPhrase(); // OK
 $body = $response->getBody();
+
+print_r($code);
+print_r($reason);
 
 print_r(json_decode((string) $body));
 
 
-$response = $client->request('GET','?format=json',['force_ip_resolve' => 'v6']);
-$body = $response->getBody();
+//$response = $client->request('GET','?format=json',['force_ip_resolve' => 'v6']);
+//$body = $response->getBody();
 
-print_r(json_decode((string) $body));
+//print_r(json_decode((string) $body));
