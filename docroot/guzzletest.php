@@ -12,17 +12,15 @@ use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
-$client = new Client([
-  'base_uri' => 'https://api.ipify.org'
-]);
+$client = new GuzzleHttp\Client(['base_uri' => 'https://api.ipify.org']);
 
-$response = $client->get('?format=json',['force_ip_resolve' => 'v4']);
+$response = $client->request('GET','?format=json',['force_ip_resolve' => 'v4']);
 $body = $response->getBody();
 
 print_r(json_decode((string) $body));
 
 
-$response = $client->get('?format=json',['force_ip_resolve' => 'v6']);
+$response = $client->request('GET','?format=json',['force_ip_resolve' => 'v6']);
 $body = $response->getBody();
 
 print_r(json_decode((string) $body));
