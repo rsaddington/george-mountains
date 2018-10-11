@@ -57,11 +57,12 @@
  */
 
 $sites = array(
-// mountaingeorge.uk
+// Main site
 'dev.mountaingeorge.uk' => 'default',
 'test.mountaingeorge.uk' => 'default',
 'mountaingeorge.uk' => 'default',
-// mountaingeorge.uk
+
+// Sanitised db site
 'dev.sanitised.mountaingeorge.uk' => 'sanitised',
 'test.sanitised.mountaingeorge.uk' => 'sanitised',
 'sanitised.mountaingeorge.uk' => 'sanitised',
