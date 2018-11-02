@@ -1,7 +1,8 @@
 {
     "require": {
         "drush/drush": "^9.2",
-        "drupal/acquia_lift": "~3.0"
+        "drupal/acquia_lift": "~3.0",
+        "drupal/core": "^8.6"
     },
     "repositories": {
         "drupal": {
