@@ -25,7 +25,8 @@
         "drupal/imagemagick": "^2.3",
         "drupal/socialfeed": "^1.0@beta",
         "drupal/acquia_lift": "^3.7",
-        "drupal/core": "8.5.8"
+        "drupal/core": "8.5.8",
+        "consolidation/robo": "1.2.4"
     },
     "require-dev": {},
     "extra": {
