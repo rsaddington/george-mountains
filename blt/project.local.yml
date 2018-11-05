@@ -1,0 +1,7 @@
+environment: local
+drush:
+  default_alias: george-mountains.local
+  aliases:
+    local: george-mountains.local
+vm:
+  enable: true
