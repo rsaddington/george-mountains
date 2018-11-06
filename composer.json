@@ -8,6 +8,7 @@
         "acquia/blt": "~8.9",
         "acquia/lightning": "~3.1.3",
         "consolidation/robo": "1.2.4",
+        "drupal/acquia_contenthub": "~1.0",
         "drupal/acquia_lift": "~3.0",
         "drupal/admin_toolbar": "^1.23",
         "drupal/advagg": "^3.5",
